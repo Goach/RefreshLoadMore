@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.goach.refreshloadmore.RefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rlRefresh"
+    android:background="#F5F5F5">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/scroll_test"/>
+    </androidx.core.widget.NestedScrollView>
+</com.goach.refreshloadmore.RefreshLayout>

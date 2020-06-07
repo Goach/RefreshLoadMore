@@ -1,0 +1,22 @@
+<resources>
+    <!--下拉刷新控件-->
+    <string name="refresh_header_hint_normal">下拉刷新</string>
+    <string name="refresh_header_hint_ready">松开刷新数据</string>
+    <string name="refresh_header_hint_loading">正在加载&#8230;</string>
+    <string name="refresh_header_hint_done">刷新完成</string>
+    <string name="refresh_header_last_time">上次更新时间：</string>
+    <string name="refresh_footer_hint_nomore">已显示全部内容</string>
+
+    <string name="refresh_header_time_today">今天</string>
+    <string name="refresh_header_time_0">刚刚</string>
+    <string name="refresh_header_time_1">秒前</string>
+    <string name="refresh_header_time_2">分钟前</string>
+    <string name="refresh_header_time_3">小时前</string>
+    <string name="refresh_header_time_4">天前</string>
+    <string name="refresh_header_time_5">月前</string>
+    <string name="refresh_header_time_6">年前</string>
+
+    <string name="loading_now">正在加载</string>
+
+</resources>
+
