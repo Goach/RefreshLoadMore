@@ -12,7 +12,7 @@
 	}
 
 dependencies {
-	        implementation 'com.github.Goach:RefreshLoadMore:1.0.0'
+	        implementation 'com.github.Goach:RefreshLoadMore:1.0.1'
 	}
 ```
 # 下拉刷新
