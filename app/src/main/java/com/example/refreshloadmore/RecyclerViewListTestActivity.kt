@@ -38,7 +38,7 @@ class RecyclerViewListTestActivity : AppCompatActivity(), RefreshLayout.RefreshL
             }
             launch(Dispatchers.Main) {
                 listItemAdapter.notifyDataSetChanged()
-                rlRefresh.refreshComplete()
+                rlRefresh.refreshComplete(currPage > pageCount)
             }
         }
     }

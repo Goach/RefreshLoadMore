@@ -33,9 +33,9 @@ class RefreshLayout : LinearLayout {
     }
 
     constructor(ctx: Context, attributeSet: AttributeSet, defStyleAttr: Int) : super(
-        ctx,
-        attributeSet,
-        defStyleAttr
+            ctx,
+            attributeSet,
+            defStyleAttr
     ) {
         init(ctx)
     }
@@ -152,10 +152,10 @@ class RefreshLayout : LinearLayout {
                 it.post {
                     if (it.measuredHeight.toFloat() == 0f) {
                         it.onMove(
-                            TypedValue.applyDimension(
-                                TypedValue.COMPLEX_UNIT_DIP,
-                                60f, resources.displayMetrics
-                            )
+                                TypedValue.applyDimension(
+                                        TypedValue.COMPLEX_UNIT_DIP,
+                                        60f, resources.displayMetrics
+                                )
                         )
                     } else {
                         it.onMove(it.measuredHeight.toFloat())
@@ -179,7 +179,7 @@ class RefreshLayout : LinearLayout {
         setRefreshListener(listener)
         if (mScrollView is LoadMoreRecyclerView) {
             (mScrollView as LoadMoreRecyclerView).setLoadMoreListener(object :
-                LoadMoreRecyclerView.LoadMoreListener {
+                    LoadMoreRecyclerView.LoadMoreListener {
                 override fun onLoadMore() {
                     listener.onLoadMore()
                 }
@@ -189,10 +189,15 @@ class RefreshLayout : LinearLayout {
     }
 
     fun refreshComplete() {
+        refreshComplete(true)
+    }
+
+    fun refreshComplete(noMore: Boolean) {
         mIsLoadingData = false
         mRefreshHeader?.refreshComplete()
         if (mScrollView is LoadMoreRecyclerView) {
             (mScrollView as LoadMoreRecyclerView).showFooter()
+            (mScrollView as LoadMoreRecyclerView).loadMoreComplete(noMore)
         }
     }
 
