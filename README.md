@@ -12,7 +12,7 @@
 	}
 
 dependencies {
-	        implementation 'com.github.Goach:RefreshLoadMore:1.0.1'
+	        implementation 'com.github.Goach:RefreshLoadMore:1.0.0'
 	}
 ```
 # 下拉刷新
@@ -77,7 +77,7 @@ rlRefresh
                         }
                         launch(Dispatchers.Main) {
                             listItemAdapter.notifyDataSetChanged()
-                            rlRefresh.refreshComplete()
+                            rlRefresh.refreshComplete(currPage > pageCount)
                         }
                     }
                 }
