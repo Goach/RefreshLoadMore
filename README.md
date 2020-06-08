@@ -1,7 +1,7 @@
 # RefreshLoadMore
 下拉刷新上拉加载的控件
 
-#引入
+# 引入
 
 ```
 	allprojects {
@@ -67,7 +67,7 @@ rlRefresh.setRefreshListener(object:RefreshLayout.RefreshListener{
 ```
 rlRefresh
             .setRefreshLoadMoreListener(object:RefreshLayout.RefreshLoadMoreListener{
-                override fun onLoadMore() {
+                override fun onRefresh() {
                     currPage = 1
                     GlobalScope.launch {
                         delay(10000)
@@ -82,7 +82,7 @@ rlRefresh
                     }
                 }
 
-                override fun onRefresh() {
+                override fun onLoadMore() {
                     GlobalScope.launch {
                         delay(1000)
                         for (i in 0 until 10) {
